@@ -1,0 +1,12 @@
+.nav-item>a:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  /* Styles */
+  .nav-list {
+    display: none;
+  }
+}

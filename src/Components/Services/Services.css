@@ -1,0 +1,163 @@
+.about-me>:nth-child(1) {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--black);
+}
+
+.about-me>:nth-child(2) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.about-me>:nth-child(3) {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--black);
+}
+
+.toolkits>* {
+    /* transform: scale(0.1); */
+    width: 58px;
+    height: 54px;
+}
+
+.tools {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--black);
+}
+
+@media screen and (max-width: 375px) {
+    .about {
+        margin-top: 30px;
+        /* padding: 0 24px; */
+    }
+
+    .about-me>:nth-child(1) {
+        font-size: 32px;
+    }
+
+    .about-me>:nth-child(2) {
+        font-size: 32px;
+    }
+
+    .about-me>:nth-child(3) {
+        font-size: 32px;
+    }
+
+    .about-me>img {
+        display: none;
+    }
+
+    .intro>p {
+        font-size: 12px;
+        width: 100%
+    }
+
+    .toolkits {
+        width: 50px;
+    }
+
+    .toolkits>* {
+        width: 35px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        flex-direction: column;
+        /* align-items: center; */
+        margin: 0;
+        margin-top: 70px;
+    }
+
+    .intro {
+        gap: 0px;
+    }
+
+    .intro>p {
+        font-size: 14px;
+        /* padding: 0 24px; */
+        width: 325px;
+    }
+
+    .toolkits {
+        width: 320px;
+    }
+
+    .toolkits>* {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-me>:nth-child(1) {
+        font-size: 36px;
+    }
+
+    .about-me>:nth-child(2) {
+        font-size: 36px;
+    }
+
+    .about-me>:nth-child(3) {
+        font-size: 36px;
+    }
+
+    .about-me>img {
+        transform: scale(0.7);
+    }
+
+    .tech {
+        margin-top: 30px;
+    }
+
+    .tech>span {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    /* Styles */
+    .about {
+        /* justify-content: space-around; */
+        /* padding: 0 24px; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+
+    .intro {
+        width: 350px;
+    }
+
+    .intro>p {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .toolkits {
+        width: 300px;
+    }
+
+    .toolkits>* {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-me>:nth-child(1) {
+        font-size: 36px;
+    }
+
+    .about-me>:nth-child(2) {
+        font-size: 36px;
+    }
+
+    .about-me>:nth-child(3) {
+        font-size: 36px;
+    }
+
+    .about-me>img {
+        width: 100px;
+    }
+}

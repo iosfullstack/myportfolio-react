@@ -1,0 +1,61 @@
+.in-touch>:nth-child(1) {
+  font-weight: bold;
+  font-size: 48px;
+  color: var(--black);
+}
+
+.in-touch>:nth-child(2) {
+  color: var(--orange);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.user {
+  width: 320px;
+  height: 42px;
+  padding: 5px;
+  outline: none;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 96px !important;
+}
+
+@media only screen and (max-device-width : 480px) {
+
+  /* Styles */
+  .in-touch>:nth-child(1) {
+    font-size: 36px;
+  }
+
+  .in-touch>:nth-child(2) {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width : 375px) {
+
+  /* Styles */
+  .in-touch>:nth-child(1) {
+    font-size: 24px;
+  }
+
+  .in-touch>:nth-child(2) {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles */
+  .in-touch>:nth-child(1) {
+    font-size: 48px;
+  }
+
+  .in-touch>:nth-child(2) {
+    font-size: 48px;
+  }
+}
