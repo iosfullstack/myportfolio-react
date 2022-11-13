@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import Pdf from '../../images/myResumee (1).pdf'
 import Github from '../../images/github.png'
 import Twitter from '../../images/twitter.png'
 import Instagram from '../../images/instagram.png'
@@ -73,7 +74,7 @@ const Hero = () => {
             transition={transition} 
             className="hero-cart absolute flex items-center bottom-1/4 right-px gap-4">
             <div className="hero-dwnld flex gap-4 items-center bg-white text-sm p-3 rounded-2xl shadow-black">
-                <a className='flex gap-2' href="http://">
+                <a className='flex gap-2' href={Pdf}>
                     Download CV
                     <ImDownload/>
                 </a>
