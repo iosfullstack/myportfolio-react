@@ -80,11 +80,11 @@
     .intro>p {
         font-size: 14px;
         /* padding: 0 24px; */
-        width: 325px;
+        width: 320px;
     }
 
     .toolkits {
-        width: 320px;
+        width: 300px;
     }
 
     .toolkits>* {
