@@ -48,7 +48,7 @@ const Services = () => {
                 experience then don't hesitate to contact me.
             </p>
             <Link to='contact' smooth={true} spy={true}>
-                <a className='block text-blue-600 hover:text-amber-500 w-52' href="#contact">Let's make something special.</a>
+                <a className='special block text-blue-600 hover:text-amber-500 w-52' href="#contact">Let's make something special.</a>
             </Link>
         </div>
         <div className="tech relative flex flex-col gap-7">

@@ -2,6 +2,8 @@ import React from 'react'
 import './Navbar.css'
 import Toggle from '../Toggle/Toggle'
 import { Link } from 'react-scroll'
+import Pdf from '../../images/myResumee (1).pdf'
+import {ImDownload} from 'react-icons/im'
 
 const Navbar = () => {
   return (
@@ -26,10 +28,17 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to='contact' smooth={true} spy={true}>
-            <a href='#contact' className="nav-btn">
+            <a href='#contact' className="nav-btn max-sm:hidden">
               Contact
             </a>
           </Link>
+          
+                <a className='download hidden max-xl:flex gap-2 text-sm' href={Pdf}>
+                    <ImDownload/>
+                    CV
+                </a>
+                
+            
           
         </div>
       </div>

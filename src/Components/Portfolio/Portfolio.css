@@ -58,7 +58,7 @@
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  /* Styles */
+ 
   .dropdown-label, .dropdown-label1 {
     font-size: 28px;
   }

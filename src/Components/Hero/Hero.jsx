@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import Pdf from '../../images/myResumee (1).pdf'
 import Github from '../../images/github.png'
 import Twitter from '../../images/twitter.png'
 import Instagram from '../../images/instagram.png'
@@ -8,6 +7,7 @@ import Linkldn from '../../images/linkedin.png'
 import IOS from '../../images/IOS-img-removebg-preview.png'
 import Cool from '../../images/glassesimoji.png'
 import {motion} from 'framer-motion'
+import Pdf from '../../images/myResumee (1).pdf'
 import {ImDownload} from 'react-icons/im'
 import { ThemeContext } from '../../Context/Context'
 import { useContext } from 'react'
@@ -72,7 +72,7 @@ const Hero = () => {
             initial={{right: "4%"}}
             whileInView={{right: "2%"}}
             transition={transition} 
-            className="hero-cart absolute flex items-center bottom-1/4 right-px gap-4">
+            className="hero-cart absolute flex items-center bottom-1/4 right-px gap-4 max-sm:hidden">
             <div className="hero-dwnld flex gap-4 items-center bg-white text-sm p-3 rounded-2xl shadow-black">
                 <a className='flex gap-2' href={Pdf}>
                     Download CV
