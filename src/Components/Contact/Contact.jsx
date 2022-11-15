@@ -7,14 +7,27 @@ const Contact = () => {
     const form = useRef();
 
     const [message, setMessage] = useState(false)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [messages, setMessages] = useState('')
+    // const [errors, setErrors] = useState(false)
 
     const sendEmail = (e) => {
       e.preventDefault();
+
+      setName('')
+      setEmail('')
+      setMessages('')
   
       emailjs.sendForm('service_ygvav1s', 'template_p7j47vc', form.current, 'M4sKPHRXisxKTEuxt')
         .then((result) => {
             console.log(result.text);
-            setMessage(true)
+            
+            if (name === '' || email === '' || messages === '') {
+                alert('input fields cannot be empty')
+            } else {
+                setMessage(true)
+            }
         }, (error) => {
             console.log(error.text);
         });
@@ -30,11 +43,12 @@ const Contact = () => {
 
         <div className="c-right flex items-center justify-center relative">
             <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-8 items-center' action="">
-                <input type="text" name="user_name" id="" placeholder='Name' className='user' />
-                <input type="text" name="user_email" id="" placeholder='Email@example.com' className='user'  />
-                <textarea name="message" id="" cols="30" rows="10" placeholder='Message' className='user' ></textarea>
+                <input onChange={e => setName(e.target.value)} value={name} type="text" name="user_name" id="" placeholder='Name' className='user' />
+                <input onChange={e => setEmail(e.target.value)} value={email} type="text" name="user_email" id="" placeholder='Email@example.com' className='user'  />
+                <textarea onChange={e => setMessages(e.target.value)} value={messages}  name="message" id="" cols="30" rows="10" placeholder='Message' className='user' ></textarea>
                 <input type="submit" value="Send Message" className='nav-btn'   />
             <span>{message && "Message Sent. Thanks for contacting me..😍"}</span>
+            {/* <span>{errors && "input is empty 😍"}</span> */}
             </form>
         </div>
     </div>
