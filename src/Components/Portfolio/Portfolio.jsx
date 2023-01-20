@@ -37,7 +37,7 @@ const Portfolio = () => {
   const reveal4 = () => setShow6(!show6)
   const reveal5 = () => setShow7(!show7)
   return (
-    <div className='portfolios mt-28'>
+    <div id="project" className='portfolios mt-28'>
       <span style={{color: darkMode ? 'white' : ''}}>My Projects</span>
     <div className="portfolio flex flex-row flex-wrap gap-5 justify-center items-center mt-10">
       

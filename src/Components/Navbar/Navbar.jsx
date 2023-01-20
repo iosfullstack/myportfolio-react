@@ -22,7 +22,7 @@ const Navbar = () => {
             <Link to='about' smooth={true} spy={true}>
             <li>About</li>
             </Link>
-            <Link to='contact' smooth={true} spy={true}>
+            <Link to='project' smooth={true} spy={true}>
             <li>Portfolio</li>
             </Link>
             </ul>

@@ -7,6 +7,7 @@ import Services from './Components/Services/Services';
 import {ThemeContext} from './Context/Context'
 import {useContext} from 'react'
 import Portfolio from './Components/Portfolio/Portfolio';
+
 function App() {
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode

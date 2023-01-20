@@ -2,11 +2,14 @@ import React from 'react'
 import './Contact.css'
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Success from '../Modal/Success';
+import Error from '../Modal/Error';
 
 const Contact = () => {
     const form = useRef();
 
     const [message, setMessage] = useState(false)
+    const [errors, setErrors] = useState(false)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [messages, setMessages] = useState('')
@@ -24,9 +27,9 @@ const Contact = () => {
             console.log(result.text);
             
             if (name === '' || email === '' || messages === '') {
-                alert('input fields cannot be empty')
+                return setErrors(true)
             } else {
-                setMessage(true)
+                return setMessage(true)
             }
         }, (error) => {
             console.log(error.text);
@@ -47,7 +50,7 @@ const Contact = () => {
                 <input onChange={e => setEmail(e.target.value)} value={email} type="text" name="user_email" id="" placeholder='Email@example.com' className='user'  />
                 <textarea onChange={e => setMessages(e.target.value)} value={messages}  name="message" id="" cols="30" rows="10" placeholder='Message' className='user' ></textarea>
                 <input type="submit" value="Send Message" className='nav-btn'   />
-            <span>{message && "Message Sent. Thanks for contacting me..😍"}</span>
+            <span>{message ? true && <Success/> : errors && <Error/>}</span>
             {/* <span>{errors && "input is empty 😍"}</span> */}
             </form>
         </div>
